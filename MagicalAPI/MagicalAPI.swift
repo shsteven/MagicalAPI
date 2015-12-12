@@ -9,9 +9,9 @@
 import Foundation
 import Alamofire
 
-class MagicalAPI: NSObject {
+public class MagicalAPI: NSObject {
     
-    override init() {
+    public override init() {
         Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
             .response { request, response, data, error in
                 print(request)
